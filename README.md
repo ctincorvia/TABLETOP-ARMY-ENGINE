@@ -13,11 +13,17 @@ There are also 3 pre-constructed armies for you to play with to get a feel for h
 
 # Advanced instructions
 Squads with the same priority will go in to battle at the same time.  Otherwise, squads with the lowers priority will go in to battle first.
-During a battle, type resolve to skip to the end of the battle
-During a battle, type more to increase the amount of data reported
-During a battle, type less to decrease the amount of data reported
-Anytime, type army1 absorb army2 to absorb one army in to another
-Anytime, type refresh army to erase all of it's casualties
+
+During a battle, type resolve to skip to the end of the battle.
+
+During a battle, type more to increase the amount of data reported.
+
+During a battle, type less to decrease the amount of data reported.
+
+Anytime, type army1 absorb army2 to absorb one army in to another.
+
+Anytime, type refresh army to erase all of it's casualties.
+
 During the battle, the engine will allow you to start another battle, but the original battle won't continue until the secondary one resolves.
 
 # Author
