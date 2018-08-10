@@ -12,7 +12,7 @@ Once you have python, double click the the START-ENGINE file.  There are some ba
 There are also 3 pre-constructed armies for you to play with to get a feel for how the commands work - dwarves, dwarves2, and undead.
 
 # Advanced instructions
-Squads with the same priority will go in to battle at the same time.  Otherwise, squads with the lowers priority will go in to battle first.
+Squads with the same priority will go in to battle at the same time.  Otherwise, squads with the lowest priority will go in to battle first.
 
 During a battle, type resolve to skip to the end of the battle.
 
