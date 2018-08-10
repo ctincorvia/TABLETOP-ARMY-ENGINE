@@ -1,8 +1,8 @@
 # DND-ARMY-ENGINE
 
-Use this for all of you gigantic D&D battle simulation needs. Add merge armies or add units in the middle of battles.
+Use this for all of you gigantic D&D battle simulation needs. Add arrmies, merge rmies, or add units in the middle of battles.
 Have the master necromancer lead from the back, and the high paladin lead from the front.
-Get real time diagnostics.  Have the same army fight other armies one after another.  Go crazy.
+Get real time diagnostics.  Have the same army fight other armies one after another with losses and other stats persisting.  Go crazy.
 Right now, ranged units are not supported.
 
 # Getting started
