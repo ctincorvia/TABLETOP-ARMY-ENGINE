@@ -1,5 +1,4 @@
 import copy
-from infantry import *
 
 
 class Squad:
@@ -62,5 +61,5 @@ class Squad:
                 return soldiers_sent or []
             available_soldiers[i].fielded = True
             soldiers_sent.append(available_soldiers[i])
-        return soldiers_sent or []
+        return soldiers_sent
 

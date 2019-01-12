@@ -28,7 +28,7 @@ class Infantry:
     def fight(self, other_soldier):
         for attack in range(0, self.attacks):
             attack = attacks.roll(1, 20, self.to_hit, self.offensive - other_soldier.defensive)
-            if attack != "F!" and (attack == "C!" or int(attack) >= other_soldier.armor_class):
+            if int(attack) >= other_soldier.armor_class:
                 damage = attacks.roll(1, self.face, self.damage_modifier)
                 self.damage_done += int(damage)
                 other_soldier.health -= int(damage)

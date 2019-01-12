@@ -33,6 +33,7 @@ class Army:
                 reserves += 1
             if soldier.health <= 0:
                 dead += 1
+        print("Total soldiers: " + str(len(all_soldiers)))
         print("Total dead: " + str(dead))
         print("In reserve: " + str(reserves))
 
@@ -77,12 +78,14 @@ class Army:
             deploying_troops = self.supply_army(deploying_squads, number_of_soldiers)
         # return if we've fulfilled the request or we can't deploy any more troops
         if len(deploying_troops) == number_of_soldiers:
-            return deploying_troops or []
+            return deploying_troops
         if len(deploying_troops) == 0:
-            return deploying_troops or []
+            return deploying_troops
         else:
             # otherwise, look for lower priority troops to deploy
-            return deploying_troops.extend(self.supply_troops(number_of_soldiers - len(deploying_troops))) or []
+            additional_troops = self.supply_troops(number_of_soldiers - len(deploying_troops))
+            deploying_troops.extend(additional_troops)
+            return deploying_troops
 
     @staticmethod
     def supply_army(deploying_squads, number_of_troops):
@@ -99,7 +102,7 @@ class Army:
         supplied_troops.extend(deploying_squads[0].supply_troops(remainder))
         if len(supplied_troops) == 0:
             print("")
-        return supplied_troops or []
+        return supplied_troops
 
     def supply_horde(self, deploying_squads, number_of_troops):
         return self.supply_army(deploying_squads, number_of_troops)

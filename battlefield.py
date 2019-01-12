@@ -74,9 +74,11 @@ class Battlefield:
 
     def armies_advance(self):
         # both armies will attempt to fill the front
-        for soldier in self.army1.supply_troops(self.front_size - len(self.front1)):
+        soldiers1 = self.army1.supply_troops(self.front_size - len(self.front1))
+        for soldier in soldiers1:
             self.front1.add(soldier)
-        for soldier in self.army2.supply_troops(self.front_size - len(self.front2)):
+        soldiers2 = self.army2.supply_troops(self.front_size - len(self.front2))
+        for soldier in soldiers2:
             self.front2.add(soldier)
         # if either army cannot create a full battle line, fill the space with the other amy (if possible)
         if len(self.front1) < self.front_size or len(self.front2) < self.front_size:
@@ -116,7 +118,6 @@ class Battlefield:
         self._apply_overkill_damage(list(self.front1))
         self._apply_overkill_damage(list(self.front2))
 
-    # I feel like this isn't working correctly
     def _apply_overkill_damage(self, overkill_front):
         overkill_attacks = list()
         for soldier in overkill_front:
