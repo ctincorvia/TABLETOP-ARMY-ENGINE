@@ -12,12 +12,12 @@ testarmy = Army("Dwarves2", False, armies)
 testarmy.add_soldier_type("Ironbreaker", 21, 59, 7, 4, 2, 8, 1, 0)
 testarmy.add_squad("Ironbreakers", "Ironbreaker", 60, 1)
 testarmy2.add_soldier_type("Hammer", 18, 59, 8, 5, 2, 13, 0, 0)
-testarmy2.add_squad("Hammers", "Hammer", 60, 1)
+testarmy2.add_squad("Hammers", "Hammer", 100, 1)
 testhorde = Army("UndeadHorde", True, armies)
 testhorde.add_soldier_type("Zombie", 8, 22, 4, 2, 1, 6)
-testhorde.add_soldier_type("Doom Skeleton", 14, 11, 10, 8, 1, 8)
+testhorde.add_soldier_type("Blood Knight", 14, 11, 10, 8, 1, 8)
 testhorde.add_squad("Zombies", "Zombie", 1000, 1)
-testhorde.add_squad("Doom Skeletons", "Doom Skeleton", 200, 1)
+testhorde.add_squad("Blood Knights", "Blood Knight", 200, 1)
 armies["dwarves"] = testarmy2
 armies["dwarves2"] = testarmy
 armies["undead"] = testhorde

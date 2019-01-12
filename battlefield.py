@@ -1,3 +1,6 @@
+from army import *
+
+
 class Battlefield:
     def __init__(self, army1, army2, front):
         self.army1 = army1

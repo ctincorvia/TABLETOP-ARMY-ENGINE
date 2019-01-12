@@ -16,6 +16,12 @@ class Army:
         return self.name
     __repr__ = __str__
 
+    def living_soldiers(self):
+        all_soldiers = list()
+        for squad in self.squads:
+            all_soldiers.extend(squad.soldiers)
+        return len(all_soldiers)
+
     def status(self):
         all_soldiers = list()
         for squad in self.squads:
@@ -70,7 +76,9 @@ class Army:
         else:
             deploying_troops = self.supply_army(deploying_squads, number_of_soldiers)
         # return if we've fulfilled the request or we can't deploy any more troops
-        if len(deploying_troops) == number_of_soldiers or len(deploying_troops) == 0:
+        if len(deploying_troops) == number_of_soldiers:
+            return deploying_troops or []
+        if len(deploying_troops) == 0:
             return deploying_troops or []
         else:
             # otherwise, look for lower priority troops to deploy
