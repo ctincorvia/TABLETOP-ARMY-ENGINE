@@ -1,6 +1,5 @@
 import unittest
 from army import *
-from infantry import *
 
 
 class InfantryTest(unittest.TestCase):
@@ -9,7 +8,7 @@ class InfantryTest(unittest.TestCase):
         self.armies = dict()
         # Armies to pull infantry out of
         dwarves = Army("Dwarves", False, self.armies)
-        dwarves.add_soldier_type("Hammer", 900, 59, 8, 5, 2, 13, 0, 0)
+        dwarves.add_soldier_type("Hammer", 900, 59, 8, 5, 1, 13, 0, 0)
         dwarves.add_squad("Hammers", "Hammer", 100, 1)
         undead = Army("UndeadHorde", True, self.armies)
         undead.add_soldier_type("Zombie", 0, 22, 4, 2, 1, 6)
@@ -27,6 +26,7 @@ class InfantryTest(unittest.TestCase):
         starting_hp = soldier1.max_health
         soldier2.fight(soldier1)
         self.assertGreater(starting_hp, soldier1.health)
+        self.assertGreater(soldier1.health, soldier1.health - (soldier2.face + soldier2.damage_modifier + 1))
 
     def test_infantry_can_miss(self):
         army1 = self.armies["undead"]

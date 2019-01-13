@@ -68,10 +68,7 @@ class Army:
         for sqd in self.squads:
             if sqd.priority == lowest_priority and not sqd.depleted:
                 deploying_squads.append(sqd)
-        if self.horde:
-            deploying_troops = self.supply_horde(deploying_squads, number_of_soldiers)
-        else:
-            deploying_troops = self.supply_army(deploying_squads, number_of_soldiers)
+        deploying_troops = self.supply_army(deploying_squads, number_of_soldiers)
         # return if we've fulfilled the request or we can't deploy any more troops
         if len(deploying_troops) == number_of_soldiers:
             return deploying_troops
@@ -100,5 +97,3 @@ class Army:
             print("")
         return supplied_troops
 
-    def supply_horde(self, deploying_squads, number_of_troops):
-        return self.supply_army(deploying_squads, number_of_troops)
