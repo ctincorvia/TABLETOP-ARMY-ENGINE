@@ -1,4 +1,4 @@
-# DND-ARMY-ENGINE
+# TABLETOP-ARMY-ENGINE
 
 Use this for all of you gigantic D&D battle simulation needs. Add armies, merge armies, or add units in the middle of battles.
 Have the master necromancer lead from the back, and the high paladin lead from the front.
@@ -8,8 +8,8 @@ Right now, ranged units are not supported.
 # Getting started
 You'll need python 3 to run this.  It's available here: https://www.python.org/downloads/
 
-Once you have python, double click the the START-ENGINE file.  There are some basic instructions that will pop up.
-There are also 3 pre-constructed armies for you to play with to get a feel for how the commands work - dwarves, dwarves2, and undead.
+Once you have python, run the the START-ENGINE file.  There are some basic instructions that will pop up.
+There are also 3 pre-constructed armies for you to play with to get a feel for how the commands work - dwarves, reinforcements, and undead.
 
 # Advanced instructions
 Squads with the same priority will go in to battle at the same time.  Otherwise, squads with the lowest priority will go in to battle first.
