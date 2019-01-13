@@ -8,7 +8,7 @@ armies = dict()
 
 # Armies to play with to lean how the program works
 dwarves = Army("Dwarves", False, armies)
-reinforcements = Army("Dwarves2", False, armies)
+reinforcements = Army("reinforcements", False, armies)
 reinforcements.add_soldier_type("Ironbreaker", 21, 59, 7, 4, 2, 8, 1, 0)
 reinforcements.add_squad("Ironbreakers", "Ironbreaker", 60, 1)
 dwarves.add_soldier_type("Hammer", 18, 59, 8, 5, 2, 13, 0, 0)

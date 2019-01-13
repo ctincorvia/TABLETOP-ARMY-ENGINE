@@ -3,6 +3,7 @@ import attacks
 
 
 class TestAttacks(unittest.TestCase):
+
     def test_attack_roll(self):
         for i in range(0, 10):
             flat = int(attacks.attack_roll(i, 0))

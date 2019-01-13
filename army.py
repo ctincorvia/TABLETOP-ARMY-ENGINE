@@ -59,10 +59,6 @@ class Army:
         sq.refresh()
         self.squads.append(sq)
 
-    def set_defenses(self, offensive, defensive):
-        for sqd in self.squads:
-            sqd.set_defenses(offensive, defensive)
-
     def supply_troops(self, number_of_soldiers):
         lowest_priority = 9999999
         for sqd in self.squads:

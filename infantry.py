@@ -21,10 +21,6 @@ class Infantry:
         return self.name
     __repr__ = __str__
 
-    def set_defenses(self, offensive, defensive):
-        self.offensive = offensive
-        self.defensive = defensive
-
     def fight(self, other_soldier):
         for attack in range(0, self.attacks):
             attack = attacks.roll(1, 20, self.to_hit, self.offensive - other_soldier.defensive)

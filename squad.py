@@ -43,10 +43,6 @@ class Squad:
         for i in range(0, self.original_size):
             self.soldiers.append(copy.copy(soldier))
 
-    def set_defenses(self, offensive, defensive):
-        for soldier in self.soldiers:
-            soldier.set_defenses(offensive, defensive)
-
     # attempt to send the requested number of soldiers, but we might not have enough
     def supply_troops(self, number_of_soldiers):
         available_soldiers = list()
